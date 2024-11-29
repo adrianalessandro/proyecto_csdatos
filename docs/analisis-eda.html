@@ -50,6 +50,13 @@
                     <div class="question-number">1</div>
                     <h3>Impacto de la IA en Sectores Laborales</h3>
                 </div>
+                <div class="graph-container">
+                    <img
+                        src="images/graphs/sector_layoffs.png"
+                        alt="Despidos por Sector"
+                        class="analysis-graph"
+                    />
+                </div>
                 <div class="analysis-text">
                     <h4>Sectores Más Afectados:</h4>
                     <ul>
@@ -120,6 +127,13 @@
                     <div class="question-number">2</div>
                     <h3>Evolución de Habilidades en la Era de la IA</h3>
                 </div>
+                <div class="graph-container">
+                    <img
+                        src="images/graphs/skills_evolution.png"
+                        alt="Evolución de Habilidades"
+                        class="analysis-graph"
+                    />
+                </div>
                 <div class="analysis-text">
                     <h4>Pilares Fundamentales:</h4>
                     <p>
@@ -184,45 +198,66 @@
             <div class="question-card">
                 <div class="question-header">
                     <div class="question-number">3</div>
-                    <h3>Patrones de Inversión y Empleo</h3>
+                    <h3>Patrones de Inversión y su Impacto en el Empleo</h3>
+                </div>
+                <div class="graph-container">
+                    <img
+                        src="images/graphs/investment_trend.png"
+                        alt="Tendencia de Inversión Global en IA"
+                        class="analysis-graph"
+                    />
+                    <img
+                        src="images/graphs/layoffs_2021.png"
+                        alt="Despidos por Industria 2021"
+                        class="analysis-graph"
+                    />
                 </div>
                 <div class="analysis-text">
-                    <h4>Tendencias de Inversión:</h4>
+                    <p>
+                        El análisis revela una correlación significativa entre
+                        el pico de inversión en IA y los patrones de despidos:
+                    </p>
+                    <h4>Inversión en IA:</h4>
                     <ul>
-                        <li>
-                            <strong>2021 (Año Pico)</strong>:
-                            <ul>
-                                <li>Inversión récord: 135 mil millones USD</li>
-                                <li>Máxima adopción de tecnologías IA</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Fases de Desarrollo</strong>:
-                            <ul>
-                                <li>Crecimiento Gradual (2013-2019)</li>
-                                <li>Aceleración (2019-2021)</li>
-                                <li>Ajuste Post-2021</li>
-                            </ul>
-                        </li>
+                        <li>Pico máximo en 2021 con 670 mil millones USD</li>
+                        <li>Crecimiento exponencial 2018-2021</li>
+                        <li>Descenso post-2021</li>
                     </ul>
-
-                    <h4>Impacto en el Empleo:</h4>
+                    <h4>Impacto en Despidos (2021):</h4>
                     <ul>
-                        <li>27.73% promedio de despidos en 2021</li>
-                        <li>Mayor afectación en roles administrativos</li>
-                        <li>Correlación directa con automatización</li>
+                        <li>Educación: 70% - mayor tasa de reestructuración</li>
+                        <li>Transporte: 40% - segunda más afectada</li>
+                        <li>
+                            Sectores tecnológicos (Data): 27% - impacto moderado
+                        </li>
                     </ul>
                 </div>
                 <div class="code-box">
                     <pre><code>
-    # Visualización de inversión global
-    plt.figure(figsize=(12, 6))
-    plt.plot(yearly_investment.index, 
-             yearly_investment.values, 
-             marker='o',
-             linewidth=2)
-    plt.title('Inversión Global en IA (2013-2023)')
-                </code></pre>
+            # Código para el gráfico de inversión
+            investment_trend = investment_data.groupby('Year')['Global corporate investment in AI'].sum()
+            plt.figure(figsize=(10, 6))
+            plt.plot(investment_trend.index, 
+                     investment_trend.values, 
+                     marker='o', 
+                     linestyle='-', 
+                     label='Inversión en IA (en miles de millones)')
+            plt.title('Tendencia de la Inversión Global en IA', fontsize=16)
+            plt.xlabel('Año', fontsize=12)
+            plt.ylabel('Inversión en IA (miles de millones)', fontsize=12)
+            plt.grid(True)
+            plt.legend()
+            
+            # Código para el gráfico de despidos
+            plt.figure(figsize=(12, 6))
+            industry_layoffs_peak_filtered.plot(kind='bar', color='red')
+            plt.title('Despidos por industria en el año 2021 (Año pico de inversión en IA)', 
+                      fontsize=16)
+            plt.xlabel('Industria', fontsize=12)
+            plt.ylabel('Porcentaje promedio de despidos', fontsize=12)
+            plt.xticks(rotation=45)
+            plt.grid(axis='y')
+            </code></pre>
                 </div>
             </div>
 
@@ -230,41 +265,61 @@
             <div class="question-card">
                 <div class="question-header">
                     <div class="question-number">4</div>
-                    <h3>Distribución Geográfica de la Adopción de IA</h3>
+                    <h3>
+                        Distribución Global y Sectorial de la Adopción de IA
+                    </h3>
+                </div>
+                <div class="graph-container">
+                    <img
+                        src="images/graphs/global_leaders.png"
+                        alt="Líderes Globales en Patentes de IA"
+                        class="analysis-graph"
+                    />
+                    <img
+                        src="images/graphs/industry_patents.png"
+                        alt="Distribución de Patentes por Industria"
+                        class="analysis-graph"
+                    />
                 </div>
                 <div class="analysis-text">
-                    <h4>Líderes Globales:</h4>
+                    <h4>Líderes en Patentes:</h4>
+                    <ul>
+                        <li>China: 84,608 patentes (dominancia global)</li>
+                        <li>Estados Unidos: 68,757 patentes</li>
+                        <li>Corea del Sur: 19,245 patentes</li>
+                    </ul>
+                    <h4>Distribución por Industria:</h4>
                     <ul>
                         <li>
-                            <strong>China</strong>:
-                            <ul>
-                                <li>84,608 patentes totales</li>
-                                <li>Crecimiento exponencial desde 2015</li>
-                                <li>Enfoque en manufactura y comercio</li>
-                            </ul>
+                            Dispositivos personales y computación: 171,638
+                            patentes
                         </li>
-                        <li>
-                            <strong>Estados Unidos</strong>:
-                            <ul>
-                                <li>68,757 patentes</li>
-                                <li>Liderazgo en software y servicios</li>
-                                <li>Alta inversión en I+D</li>
-                            </ul>
-                        </li>
-                        <li>
-                            <strong>Corea del Sur</strong>:
-                            <ul>
-                                <li>19,245 patentes</li>
-                                <li>Especialización en electrónica</li>
-                            </ul>
-                        </li>
+                        <li>Telecomunicaciones: 56,862 patentes</li>
+                        <li>Negocios: 37,980 patentes</li>
                     </ul>
-
-                    <h4>Concentración Regional:</h4>
-                    <p>
-                        Asia Oriental domina con 70% de patentes globales,
-                        seguida por América del Norte con 25%.
-                    </p>
+                </div>
+                <div class="code-box">
+                    <pre><code>
+            # Gráfico de líderes globales
+            country_patents = patent_summary.groupby('Entity')['Total Patents'].sum().sort_values(ascending=False)
+            plt.figure(figsize=(12, 6))
+            country_patents.head(10).plot(kind='bar', color='orange')
+            plt.title('Top 10 Países con más Patentes Totales', fontsize=16)
+            plt.xlabel('País', fontsize=12)
+            plt.ylabel('Total de Patentes', fontsize=12)
+            plt.grid(axis='y')
+            plt.tight_layout()
+            
+            # Gráfico de distribución por industria
+            plt.figure(figsize=(12, 8))
+            industry_summary.plot(kind='bar', color='purple')
+            plt.title('Distribución de Patentes por Industria', fontsize=16)
+            plt.xlabel('Industria', fontsize=12)
+            plt.ylabel('Total de Patentes', fontsize=12)
+            plt.xticks(rotation=45, ha='right')
+            plt.grid(axis='y')
+            plt.tight_layout()
+            </code></pre>
                 </div>
             </div>
 
@@ -272,38 +327,95 @@
             <div class="question-card">
                 <div class="question-header">
                     <div class="question-number">5</div>
-                    <h3>Susceptibilidad a la Automatización</h3>
+                    <h3>Automatización y Reestructuración Organizacional</h3>
+                </div>
+                <div class="graph-container">
+                    <img
+                        src="images/graphs/workload_domain.png"
+                        alt="Relación Carga de Trabajo IA y Tareas"
+                        class="analysis-graph"
+                    />
+                    <img
+                        src="images/graphs/correlation_matrix.png"
+                        alt="Correlación entre Factores IA"
+                        class="analysis-graph"
+                    />
+                    <img
+                        src="images/graphs/industry_layoffs.png"
+                        alt="Despidos por Industria"
+                        class="analysis-graph"
+                    />
                 </div>
                 <div class="analysis-text">
-                    <h4>Factores de Susceptibilidad:</h4>
+                    <h4>Hallazgos Clave:</h4>
                     <ul>
                         <li>
-                            <strong>Correlaciones Clave</strong>:
+                            Correlación Tareas-IA:
                             <ul>
-                                <li>0.93 entre tareas y modelos IA</li>
-                                <li>0.63 entre tareas y carga de trabajo IA</li>
-                                <li>0.35 entre carga de trabajo y modelos</li>
+                                <li>
+                                    Alta correlación (0.93) entre tareas y
+                                    modelos IA
+                                </li>
+                                <li>
+                                    Correlación moderada (0.63) entre tareas y
+                                    carga de trabajo
+                                </li>
                             </ul>
                         </li>
                         <li>
-                            <strong>Patrones de Automatización</strong>:
+                            Distribución por Dominio:
                             <ul>
-                                <li>20-40% carga IA en roles comunes</li>
-                                <li>Mayor impacto en tareas repetitivas</li>
-                                <li>Menor afectación en roles creativos</li>
+                                <li>
+                                    Data & IT: Mayor concentración de modelos IA
+                                </li>
+                                <li>
+                                    Administrative & Clerical: Alta
+                                    susceptibilidad
+                                </li>
+                                <li>
+                                    Communication & PR: Carga de trabajo IA
+                                    variable
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Impacto en Industrias:
+                            <ul>
+                                <li>Retail: Mayor volumen de despidos</li>
+                                <li>
+                                    Consumer: Segunda posición en
+                                    reestructuración
+                                </li>
+                                <li>Sectores especializados: Menor impacto</li>
                             </ul>
                         </li>
                     </ul>
                 </div>
                 <div class="code-box">
                     <pre><code>
-    # Correlación entre factores
-    plt.figure(figsize=(8, 6))
-    sns.heatmap(correlation_matrix, 
-                annot=True,
-                cmap='coolwarm')
-    plt.title('Correlación entre Factores de IA')
-                </code></pre>
+            # Gráfico de dispersión de carga de trabajo
+            plt.figure(figsize=(10, 6))
+            sns.scatterplot(data=dfs["df4"], 
+                            x='AI_Workload_Ratio', 
+                            y='Tasks',
+                            hue='Domain',
+                            size='AI models',
+                            alpha=0.6)
+            plt.title('Relación entre Carga de Trabajo IA y Tareas por Dominio')
+            
+            # Matriz de correlación
+            correlation_matrix = dfs["df4"][['AI_Workload_Ratio', 'Tasks', 'AI models']].corr()
+            plt.figure(figsize=(8, 6))
+            sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm')
+            plt.title('Correlación entre Factores de IA')
+            
+            # Despidos por industria
+            plt.figure(figsize=(12, 6))
+            sns.barplot(x=layoffs_by_industry.index, 
+                        y=layoffs_by_industry['Laid_Off'])
+            plt.title('Despidos por Industria')
+            plt.xticks(rotation=85)
+            </code></pre>
                 </div>
             </div>
 
