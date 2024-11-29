@@ -300,5 +300,17 @@ body {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
+.image-container {
+    width: 100%;
+    height: 300px; /* Altura fija para todos los contenedores */
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.content-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantiene la proporción y cubre el contenedor */
+}
 /* Afirmar en parte que animaciones como cosas de diseño fueron ayudados algo con ia*/
 /* pero para darle mas detalle para el usuario igual la informacion ya esta dada */
