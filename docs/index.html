@@ -3,101 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Análisis de Despidos Tech</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(-45deg, #1e3c72, #2a5298, #4776b9, #6393d0);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .top-nav {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 1rem;
-            position: sticky;
-            top: 0;
-            text-align: center;
-        }
-
-        .nav-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-        }
-
-        .nav-link {
-            color: white;
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 20px;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.1);
-        }
-
-        .nav-link:hover, .nav-link.active {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-
-        .title-card {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        .content-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #2c3e50;
-            margin: 0;
-            font-size: 2.5rem;
-            text-align: center;
-        }
-
-        h2 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-
-        .process-link {
-            display: inline-block;
-            color: #2a5298;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            background: #f0f4f8;
-            transition: all 0.3s ease;
-        }
-
-        .process-link:hover {
-            background: #e1e8f0;
-            transform: translateY(-2px);
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Navegación -->
     <nav class="top-nav">
         <div class="nav-links">
             <a href="index.html" class="nav-link active">Introducción y Contexto</a>
@@ -107,9 +16,13 @@
         </div>
     </nav>
 
-    < class="container">
-        <h1 class="main-title">Análisis de Despidos en el Sector Tech</h1>
-        
+    <div class="container">
+        <!-- Título principal -->
+        <div class="main-title">
+            <h1>Análisis de Despidos en el Sector Tech</h1>
+        </div>
+
+        <!-- Contenido principal -->
         <div class="content-card">
             <h2>Contexto y Motivación</h2>
             <p>Análisis del impacto de la IA en los trabajos del sector tecnológico...</p>
@@ -120,26 +33,41 @@
             <p>Analizar el impacto de la implementación de IA...</p>
         </div>
 
-        <div class="content-card">
-            <h2>Proceso ETL</h2>
-            <p>Limpieza y procesamiento de datos</p>
-            <a href="proceso-etl.html" class="process-link">Ver Proceso</a>
-        </div>
+        <!-- Sección de Proceso -->
+        <div class="process-showcase">
+            <h2>Proceso de Estudio</h2>
+            <div class="process-cards">
+                <!-- ETL -->
+                <div class="process-card">
+                    <div class="process-image">
+                        <img src="images/etl-icon.png" alt="Proceso ETL">
+                    </div>
+                    <h3>Proceso ETL</h3>
+                    <p>Limpieza y procesamiento de datos</p>
+                    <a href="proceso-etl.html" class="process-link">Ver Proceso</a>
+                </div>
 
-        <div class="content-card">
-            <h2>Análisis EDA</h2>
-            <p>Exploración y visualización</p>
-            <a href="analisis.html" class="process-link">Ver Análisis</a>
+                <!-- EDA -->
+                <div class="process-card">
+                    <div class="process-image">
+                        <img src="images/analysis-icon.png" alt="Análisis EDA">
+                    </div>
+                    <h3>Análisis EDA</h3>
+                    <p>Exploración y visualización</p>
+                    <a href="analisis-eda.html" class="process-link">Ver Análisis</a>
+                </div>
+
+                <!-- Discusión -->
+                <div class="process-card">
+                    <div class="process-image">
+                        <img src="images/discussion-icon.png" alt="Discusión">
+                    </div>
+                    <h3>Discusión</h3>
+                    <p>Hallazgos y conclusiones</p>
+                    <a href="discusion.html" class="process-link">Ver Discusión</a>
+                </div>
+            </div>
         </div>
     </div>
-
-    <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
-                link.classList.add('active');
-            });
-        });
-    </script>
 </body>
 </html>
