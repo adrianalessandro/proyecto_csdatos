@@ -9,65 +9,56 @@
     <!-- Navegación -->
     <nav class="top-nav">
         <div class="nav-links">
-            <a href="index.html">Introducción y Contexto</a>
+            <a href="index.html" class="nav-link">Introducción y Contexto</a>
             <a href="proceso-etl.html" class="nav-link active">Proceso ETL</a>
-            <a href="analisis-eda.html">Análisis sobre EDA</a>
-            <a href="discusion.html">Discusión</a>
+            <a href="analisis-eda.html" class="nav-link">Análisis sobre EDA</a>
+            <a href="discusion.html" class="nav-link">Discusión</a>
         </div>
     </nav>
 
     <div class="container">
         <!-- Título principal -->
-        <div class="main-header">
+        <div class="main-title">
             <h1>Análisis de Despidos en el Sector Tech</h1>
         </div>
 
-        <!-- Título de sección -->
-        <div class="section-header">
+        <!-- Extracción de Datos -->
+        <div class="content-card">
             <h2>Proceso de Extracción, Transformación y Carga</h2>
-        </div>
-
-        <!-- Contenido principal -->
-        <div class="content-section">
-            <!-- Extracción -->
-            <div class="content-block">
-                <h3 class="block-title">Extracción de Datos</h3>
-                <div class="info-box">
-                    <h4>Fuentes de Datos</h4>
-                    <ul>
-                        <li>Dataset principal de despidos</li>
-                        <li>Información complementaria</li>
-                    </ul>
-                </div>
-                <div class="code-box">
-                    <span class="code-label">Código</span>
-                    <pre><code>
+            <h3>Extracción de Datos</h3>
+            <div class="content-card">
+                <h4>Fuentes de Datos</h4>
+                <ul>
+                    <li>Dataset principal de despidos</li>
+                    <li>Información complementaria</li>
+                </ul>
+            </div>
+            <div class="code-box">
+                <pre><code>
 # Carga de datos
 import pandas as pd
 df = pd.read_csv('tech_layoffs_COMPLETO.csv')
-                    </code></pre>
-                </div>
+                </code></pre>
             </div>
+        </div>
 
-            <!-- Limpieza -->
-            <div class="content-block">
-                <h3 class="block-title">Limpieza de Datos</h3>
-                <div class="info-box">
-                    <h4>Pasos Realizados</h4>
-                    <ol>
-                        <li>Eliminación de valores nulos</li>
-                        <li>Corrección de tipos de datos</li>
-                        <li>Estandarización de formatos</li>
-                    </ol>
-                </div>
-                <div class="code-box">
-                    <span class="code-label">Código</span>
-                    <pre><code>
+        <!-- Limpieza de Datos -->
+        <div class="content-card">
+            <h3>Limpieza de Datos</h3>
+            <div class="content-card">
+                <h4>Pasos Realizados</h4>
+                <ol>
+                    <li>Eliminación de valores nulos</li>
+                    <li>Corrección de tipos de datos</li>
+                    <li>Estandarización de formatos</li>
+                </ol>
+            </div>
+            <div class="code-box">
+                <pre><code>
 # Limpieza
 df = df.dropna(subset=['Laid_Off'])
 df['Percentage'] = df['Percentage'].str.replace(',','.').astype(float)
-                    </code></pre>
-                </div>
+                </code></pre>
             </div>
         </div>
     </div>

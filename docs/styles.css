@@ -245,39 +245,5 @@ body {
     border-radius: 25px;
     transition: all 0.3s ease;
 }
-
-/* Agregar estos estilos para los íconos */
-.icon-container {
-    background: white;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin: 0 auto 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-}
-
-.process-icon {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    /* Para íconos con fondo negro */
-    filter: invert(1); /* Solo si los íconos son negros y quieres verlos en blanco */
-}
-
-.process-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 2rem;
-    border-radius: 15px;
-    text-align: center;
-    transition: all 0.3s ease;
-}
-
-.process-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
 /* Afirmar en parte que animaciones como cosas de diseño fueron ayudados algo con ia*/
 /* pero para darle mas detalle para el usuario igual la informacion ya esta dada */
