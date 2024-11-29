@@ -1,67 +1,346 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Análisis EDA - Despidos Tech</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="top-nav">
-        <div class="nav-links">
-            <a href="index.html" class="nav-link">Introducción y Contexto</a>
-            <a href="proceso-etl.html" class="nav-link">Proceso ETL</a>
-            <a href="analisis-eda.html" class="nav-link active">Análisis sobre EDA</a>
-            <a href="discusion.html" class="nav-link">Discusión</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="main-title">
-            <h1>Inteligencia Artificial y su Implementación en los Trabajos</h1>
-        </div>
-
-        <div class="section-title">
-            <h2>Análisis Exploratorio de Datos</h2>
-        </div>
-
-        <div class="image-container">
-            <img src="images/photos/iamewing.png" alt="IA en el trabajo" class="content-image">
-        </div>
-
-        <!-- Pregunta 1 -->
-        <div class="question-card">
-            <div class="question-header">
-                <div class="question-number">1</div>
-                <h3>Impacto por Sectores</h3>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Análisis EDA - Despidos Tech</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"
+                    >Introducción y Contexto</a
+                >
+                <a href="proceso-etl.html" class="nav-link">Proceso ETL</a>
+                <a href="analisis-eda.html" class="nav-link active"
+                    >Análisis sobre EDA</a
+                >
+                <a href="discusion.html" class="nav-link">Discusión</a>
             </div>
-            <div class="graph-container">
-                <img src="images/grafico_sectores.png" alt="Gráfico sectores">
+        </nav>
+
+        <div class="container">
+            <div class="main-title">
+                <h1>
+                    Inteligencia Artificial y su Implementación en los Trabajos
+                </h1>
             </div>
-            <div class="analysis-text">
-                <p>Los sectores más afectados son Retail, Consumer y Transportation...</p>
+
+            <div class="section-title">
+                <h2>Análisis Exploratorio de Datos</h2>
             </div>
-            <div class="code-box">
-                <pre><code>
-# Visualización de sectores
-plt.figure(figsize=(10, 4))
-sns.barplot(data=sectores_mas_afectados...)
+
+            <div class="content-card">
+                <h2>Resumen del Análisis</h2>
+                <p>
+                    En este análisis exploratorio exhaustivo, examinamos cinco
+                    aspectos fundamentales sobre el impacto de la IA en el
+                    ámbito laboral. Utilizamos múltiples conjuntos de datos que
+                    incluyen información sobre despidos tecnológicos, patentes
+                    de IA, inversiones corporativas, y patrones de adopción en
+                    diferentes sectores y regiones. Este análisis nos permite
+                    comprender la transformación actual del mercado laboral y
+                    sus implicaciones futuras.
+                </p>
+            </div>
+
+            <!-- Análisis 1: Sectores y Despidos -->
+            <div class="question-card">
+                <div class="question-header">
+                    <div class="question-number">1</div>
+                    <h3>Impacto de la IA en Sectores Laborales</h3>
+                </div>
+                <div class="analysis-text">
+                    <h4>Sectores Más Afectados:</h4>
+                    <ul>
+                        <li>
+                            <strong>Retail (Comercio Minorista)</strong>:
+                            <ul>
+                                <li>Mayor número absoluto de despidos</li>
+                                <li>
+                                    Impacto significativo en automatización de
+                                    procesos
+                                </li>
+                                <li>Transformación de cadenas de suministro</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Infrastructure</strong>:
+                            <ul>
+                                <li>85% de impacto porcentual - el más alto</li>
+                                <li>Reestructuración masiva de operaciones</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Consumer y Transportation</strong>:
+                            <ul>
+                                <li>Impacto significativo en ambas métricas</li>
+                                <li>
+                                    Transformación hacia modelos automatizados
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Sectores con Mayor Resistencia:</h4>
+                    <ul>
+                        <li>
+                            <strong>Semiconductores</strong>: Menor tasa de
+                            despidos por alta especialización
+                        </li>
+                        <li>
+                            <strong>SaaS</strong>: Adaptación natural a la
+                            tecnología
+                        </li>
+                        <li>
+                            <strong>Gaming</strong>: Alta demanda de creatividad
+                            humana
+                        </li>
+                    </ul>
+                </div>
+                <div class="code-box">
+                    <pre><code>
+    # Visualización sectorial detallada
+    plt.figure(figsize=(12, 6))
+    sns.barplot(data=sector_summary, 
+                x='Industry', 
+                y='porcentaje_medio',
+                palette='RdYlBu_r')
+    plt.title('Impacto Porcentual de Despidos por Sector')
+    plt.xticks(rotation=45)
+    plt.xlabel('Sector Industrial')
+    plt.ylabel('Porcentaje Medio de Despidos')
                 </code></pre>
+                </div>
             </div>
-        </div>
 
-        <!-- Pregunta 2 -->
-        <div class="question-card">
-            <div class="question-header">
-                <div class="question-number">2</div>
-                <h3>Relación entre Tamaño y Despidos</h3>
+            <!-- Análisis 2: Habilidades y Competencias -->
+            <div class="question-card">
+                <div class="question-header">
+                    <div class="question-number">2</div>
+                    <h3>Evolución de Habilidades en la Era de la IA</h3>
+                </div>
+                <div class="analysis-text">
+                    <h4>Pilares Fundamentales:</h4>
+                    <p>
+                        <strong
+                            >1. Roles con Presencia Humana
+                            Indispensable:</strong
+                        >
+                    </p>
+                    <ul>
+                        <li>
+                            Educación: Requiere interacción y adaptación
+                            personalizada
+                        </li>
+                        <li>
+                            Real Estate: Necesita negociación y comprensión
+                            contextual
+                        </li>
+                        <li>
+                            Aerospace: Demanda expertise técnico especializado
+                        </li>
+                        <li>
+                            Fitness: Énfasis en interacción personal y
+                            motivación
+                        </li>
+                    </ul>
+
+                    <p><strong>2. Roles con Integración de IA:</strong></p>
+                    <ul>
+                        <li>Data: Análisis y procesamiento avanzado</li>
+                        <li>Crypto: Innovación tecnológica continua</li>
+                        <li>Marketing: Automatización y personalización</li>
+                        <li>
+                            Sales: Combinación de IA y habilidades
+                            interpersonales
+                        </li>
+                    </ul>
+
+                    <h4>Tendencias Emergentes:</h4>
+                    <ul>
+                        <li>Aumento en demanda de habilidades híbridas</li>
+                        <li>
+                            Valoración de capacidad de adaptación tecnológica
+                        </li>
+                        <li>
+                            Énfasis en pensamiento crítico y resolución de
+                            problemas
+                        </li>
+                    </ul>
+                </div>
+                <div class="code-box">
+                    <pre><code>
+    # Análisis de tendencias en habilidades
+    df_promedio.set_index('Industry').T.plot(
+        kind='line', 
+        figsize=(10, 6),
+        title='Evolución de Demanda por Industria 2021-2024')
+                </code></pre>
+                </div>
             </div>
-            <div class="graph-container">
-                <!-- Espacio para gráfico -->
+
+            <!-- Análisis 3: Inversión en IA -->
+            <div class="question-card">
+                <div class="question-header">
+                    <div class="question-number">3</div>
+                    <h3>Patrones de Inversión y Empleo</h3>
+                </div>
+                <div class="analysis-text">
+                    <h4>Tendencias de Inversión:</h4>
+                    <ul>
+                        <li>
+                            <strong>2021 (Año Pico)</strong>:
+                            <ul>
+                                <li>Inversión récord: 135 mil millones USD</li>
+                                <li>Máxima adopción de tecnologías IA</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Fases de Desarrollo</strong>:
+                            <ul>
+                                <li>Crecimiento Gradual (2013-2019)</li>
+                                <li>Aceleración (2019-2021)</li>
+                                <li>Ajuste Post-2021</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Impacto en el Empleo:</h4>
+                    <ul>
+                        <li>27.73% promedio de despidos en 2021</li>
+                        <li>Mayor afectación en roles administrativos</li>
+                        <li>Correlación directa con automatización</li>
+                    </ul>
+                </div>
+                <div class="code-box">
+                    <pre><code>
+    # Visualización de inversión global
+    plt.figure(figsize=(12, 6))
+    plt.plot(yearly_investment.index, 
+             yearly_investment.values, 
+             marker='o',
+             linewidth=2)
+    plt.title('Inversión Global en IA (2013-2023)')
+                </code></pre>
+                </div>
             </div>
-            <div class="analysis-text">
-                <p>Análisis de la relación entre el tamaño de las empresas y los despidos...</p>
+
+            <!-- Análisis 4: Adopción Regional -->
+            <div class="question-card">
+                <div class="question-header">
+                    <div class="question-number">4</div>
+                    <h3>Distribución Geográfica de la Adopción de IA</h3>
+                </div>
+                <div class="analysis-text">
+                    <h4>Líderes Globales:</h4>
+                    <ul>
+                        <li>
+                            <strong>China</strong>:
+                            <ul>
+                                <li>84,608 patentes totales</li>
+                                <li>Crecimiento exponencial desde 2015</li>
+                                <li>Enfoque en manufactura y comercio</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Estados Unidos</strong>:
+                            <ul>
+                                <li>68,757 patentes</li>
+                                <li>Liderazgo en software y servicios</li>
+                                <li>Alta inversión en I+D</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Corea del Sur</strong>:
+                            <ul>
+                                <li>19,245 patentes</li>
+                                <li>Especialización en electrónica</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4>Concentración Regional:</h4>
+                    <p>
+                        Asia Oriental domina con 70% de patentes globales,
+                        seguida por América del Norte con 25%.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Análisis 5: Roles y Automatización -->
+            <div class="question-card">
+                <div class="question-header">
+                    <div class="question-number">5</div>
+                    <h3>Susceptibilidad a la Automatización</h3>
+                </div>
+                <div class="analysis-text">
+                    <h4>Factores de Susceptibilidad:</h4>
+                    <ul>
+                        <li>
+                            <strong>Correlaciones Clave</strong>:
+                            <ul>
+                                <li>0.93 entre tareas y modelos IA</li>
+                                <li>0.63 entre tareas y carga de trabajo IA</li>
+                                <li>0.35 entre carga de trabajo y modelos</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Patrones de Automatización</strong>:
+                            <ul>
+                                <li>20-40% carga IA en roles comunes</li>
+                                <li>Mayor impacto en tareas repetitivas</li>
+                                <li>Menor afectación en roles creativos</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="code-box">
+                    <pre><code>
+    # Correlación entre factores
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(correlation_matrix, 
+                annot=True,
+                cmap='coolwarm')
+    plt.title('Correlación entre Factores de IA')
+                </code></pre>
+                </div>
+            </div>
+
+            <!-- Síntesis Final -->
+            <div class="content-card">
+                <h2>Síntesis de Resultados</h2>
+                <p>
+                    Nuestro análisis exploratorio revela una transformación
+                    profunda del mercado laboral impulsada por la IA. Los
+                    sectores tradicionales experimentan una mayor disrupción,
+                    mientras que las áreas técnicas especializadas muestran
+                    mayor resistencia. La inversión en IA alcanzó su punto
+                    máximo en 2021, coincidiendo con cambios estructurales
+                    significativos en el empleo.
+                </p>
+
+                <h3>Hallazgos Clave:</h3>
+                <ul>
+                    <li>
+                        La automatización afecta principalmente a roles con
+                        tareas repetitivas (correlación 0.93)
+                    </li>
+                    <li>
+                        Asia Oriental lidera la adopción de IA con 70% de
+                        patentes globales
+                    </li>
+                    <li>
+                        El impacto varía significativamente por sector, desde
+                        85% en Infrastructure hasta menos del 10% en sectores
+                        especializados
+                    </li>
+                    <li>
+                        Emerge un nuevo paradigma laboral que combina
+                        automatización con habilidades humanas especializadas
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
