@@ -36,17 +36,11 @@
                 <h2>Extracción y Procesamiento de Datos</h2>
                 <p>
                     Para nuestro análisis sobre el impacto de la IA en los
-                    trabajos, hemos recolectado datos de diversas fuentes
-                    confiables que nos permiten examinar diferentes aspectos de
-                    esta transformación tecnológica.
+                    trabajos, hemos recolectado datos de diversas fuentes que
+                    nos permiten examinar esta transformación tecnológica:
                 </p>
-
-                <h3>Datasets Principales:</h3>
                 <ul>
-                    <li>
-                        IA_impact_on_jobs.csv: Análisis del impacto en roles
-                        laborales
-                    </li>
+                    <li>IA_impact_on_jobs.csv: Impacto en roles laborales</li>
                     <li>
                         artificial-intelligence-granted-patents-by-industry.csv:
                         Patentes por sector
@@ -70,95 +64,50 @@
                 </ul>
             </div>
 
-            <div class="section-title">
+            <div class="content-card">
+                <h2>Procesamiento de Datos</h2>
+                <p>
+                    Se realizó una revisión inicial de los datasets para
+                    comprender su estructura y características básicas,
+                    adaptando los formatos según fue necesario para su análisis
+                    posterior.
+                </p>
+            </div>
+
+            <div class="content-card">
                 <h2>Preguntas de Investigación</h2>
-            </div>
-
-            <!-- Tarjetas de preguntas -->
-            <div class="question-cards">
-                <div class="question-card">
-                    <h3>Impacto Sectorial</h3>
-                    <p>
-                        ¿Qué sectores laborales han experimentado el mayor
-                        impacto en términos de despidos debido a la
-                        implementación de la IA?
-                    </p>
-                </div>
-
-                <div class="question-card">
-                    <h3>Evolución de Habilidades</h3>
-                    <p>
-                        ¿Cómo ha evolucionado la demanda de habilidades en el
-                        mercado laboral desde la introducción de la IA?
-                    </p>
-                </div>
-
-                <div class="question-card">
-                    <h3>Inversión e Impacto</h3>
-                    <p>
-                        ¿Cuándo se observan los picos más significativos en la
-                        inversión en IA y su correlación con cambios en el
-                        empleo?
-                    </p>
-                </div>
-
-                <div class="question-card">
-                    <h3>Adopción Regional</h3>
-                    <p>
-                        ¿Dónde se está produciendo la adopción más rápida de la
-                        IA en el ámbito laboral?
-                    </p>
-                </div>
-
-                <div class="question-card">
-                    <h3>Automatización Jerárquica</h3>
-                    <p>
-                        ¿Por qué ciertos roles son más susceptibles a la
-                        automatización por IA?
-                    </p>
-                </div>
-            </div>
-
-            <!-- Extracción de Datos -->
-            <div class="question-card">
-                <div class="question-header">
-                    <h3>Extracción de Datos</h3>
-                </div>
-                <div class="content-card">
-                    <h4>Fuentes de Datos</h4>
-                    <ul>
-                        <li>Dataset principal de despidos</li>
-                        <li>Información complementaria</li>
-                    </ul>
-                </div>
-                <div class="code-box">
-                    <pre><code>
-# Carga de datos
-import pandas as pd
-df = pd.read_csv('tech_layoffs_COMPLETO.csv')
-                </code></pre>
-                </div>
-            </div>
-
-            <!-- Limpieza de Datos -->
-            <div class="question-card">
-                <div class="question-header">
-                    <h3>Limpieza de Datos</h3>
-                </div>
-                <div class="content-card">
-                    <h4>Pasos Realizados</h4>
-                    <ol>
-                        <li>Eliminación de valores nulos</li>
-                        <li>Corrección de tipos de datos</li>
-                        <li>Estandarización de formatos</li>
-                    </ol>
-                </div>
-                <div class="code-box">
-                    <pre><code>
-# Limpieza
-df = df.dropna(subset=['Laid_Off'])
-df['Percentage'] = df['Percentage'].str.replace(',','.').astype(float)
-                </code></pre>
+                <div class="two-column">
+                    <div>
+                        <h3>Preguntas Principales</h3>
+                        <ul>
+                            <li>
+                                ¿Qué sectores laborales han experimentado el
+                                mayor impacto en términos de despidos debido a
+                                la IA?
+                            </li>
+                            <li>
+                                ¿Cómo ha evolucionado la demanda de habilidades
+                                en el mercado laboral?
+                            </li>
+                            <li>
+                                ¿Cuándo se observan los picos más significativos
+                                en la inversión en IA?
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>Preguntas Complementarias</h3>
+                        <ul>
+                            <li>
+                                ¿Dónde se está produciendo la adopción más
+                                rápida de la IA?
+                            </li>
+                            <li>
+                                ¿Por qué ciertos roles son más susceptibles a la
+                                automatización?
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
