@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Análisis/EDA - Análisis de Despidos Tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Introducción/Contexto</a>
+            <a href="proceso-etl.html">Proceso ETL</a>
+            <a href="analisis.html" class="active">Análisis/EDA</a>
+            <a href="discusion.html">Discusión</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="title-card">
+            <h1>Análisis Exploratorio de Datos</h1>
+        </div>
+
+        <!-- Pregunta 1 -->
+        <div class="content-card">
+            <h2>Impacto por Sectores</h2>
+            <div class="visualization">
+                <img src="images/grafico_sectores.png" alt="Gráfico sectores">
+            </div>
+            <div class="analysis-text">
+                <h3>Análisis</h3>
+                <p>Los sectores más afectados son Retail, Consumer y Transportation...</p>
+            </div>
+            <div class="code-box">
+                <h3>Código Utilizado</h3>
+                <pre><code>
+# Visualización de sectores
+plt.figure(figsize=(10, 4))
+sns.barplot(data=sectores_mas_afectados...)
+                </code></pre>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="content-card">
+            <h2>Relación entre Tamaño y Despidos</h2>
+            <div class="visualization">
+                <!-- Espacio para el gráfico -->
+            </div>
+            <div class="analysis-text">
+                <h3>Análisis</h3>
+                <p>Análisis de la relación entre el tamaño de las empresas y los despidos...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

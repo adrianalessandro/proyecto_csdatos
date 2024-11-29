@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Proceso ETL - Análisis de Despidos Tech</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="top-nav">
+        <div class="nav-links">
+            <a href="index.html">Introducción/Contexto</a>
+            <a href="proceso-etl.html" class="active">Proceso ETL</a>
+            <a href="analisis.html">Análisis/EDA</a>
+            <a href="discusion.html">Discusión</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="title-card">
+            <h1>Proceso de Extracción, Transformación y Carga</h1>
+        </div>
+
+        <!-- Extracción de Datos -->
+        <div class="content-card">
+            <h2>Extracción de Datos</h2>
+            <div class="process-description">
+                <h3>Fuentes de Datos</h3>
+                <ul>
+                    <li>Dataset principal de despidos</li>
+                    <li>Información complementaria</li>
+                </ul>
+            </div>
+            <div class="code-box">
+                <h3>Código de Extracción</h3>
+                <pre><code>
+# Carga de datos
+import pandas as pd
+df = pd.read_csv('tech_layoffs_COMPLETO.csv')
+                </code></pre>
+            </div>
+        </div>
+
+        <!-- Limpieza de Datos -->
+        <div class="content-card">
+            <h2>Limpieza de Datos</h2>
+            <div class="process-steps">
+                <h3>Pasos Realizados</h3>
+                <ol>
+                    <li>Eliminación de valores nulos</li>
+                    <li>Corrección de tipos de datos</li>
+                    <li>Estandarización de formatos</li>
+                </ol>
+            </div>
+            <div class="code-box">
+                <pre><code>
+# Limpieza
+df = df.dropna(subset=['Laid_Off'])
+df['Percentage'] = df['Percentage'].str.replace(',','.').astype(float)
+                </code></pre>
+            </div>
+        </div>
+
+        <!-- Transformación -->
+        <div class="content-card">
+            <h2>Transformación</h2>
+            <p>Proceso de transformación y preparación de datos para el análisis...</p>
+        </div>
+    </div>
+</body>
+</html>
