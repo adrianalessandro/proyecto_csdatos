@@ -279,5 +279,12 @@ body {
     transform: translateY(-5px);
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
+
+.two-column {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
 /* Afirmar en parte que animaciones como cosas de diseño fueron ayudados algo con ia*/
 /* pero para darle mas detalle para el usuario igual la informacion ya esta dada */
