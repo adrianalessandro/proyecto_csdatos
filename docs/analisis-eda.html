@@ -114,9 +114,10 @@
                 y='porcentaje_medio',
                 palette='RdYlBu_r')
     plt.title('Impacto Porcentual de Despidos por Sector')
-    plt.xticks(rotation=45)
-    plt.xlabel('Sector Industrial')
+    plt.xlabel('Sector')
     plt.ylabel('Porcentaje Medio de Despidos')
+    plt.xticks(rotation=90)
+    plt.show()
                 </code></pre>
                 </div>
             </div>
@@ -186,10 +187,14 @@
                 <div class="code-box">
                     <pre><code>
     # Análisis de tendencias en habilidades
-    df_promedio.set_index('Industry').T.plot(
-        kind='line', 
-        figsize=(10, 6),
-        title='Evolución de Demanda por Industria 2021-2024')
+    # Graficamos como es el comportamiento de los despidos por industria al pasar los anios 2021 a 2024
+    import matplotlib.pyplot as plt
+
+    df_promedio.set_index('Industry').T.plot(kind='line', figsize=(10, 6))
+    plt.ylabel('Promedio de despidos')
+    plt.xlabel('Anios')
+    plt.title('Promedio de despidos por industria de 2020 a 2024')
+    plt.show()
                 </code></pre>
                 </div>
             </div>
@@ -235,6 +240,7 @@
                 <div class="code-box">
                     <pre><code>
             # Código para el gráfico de inversión
+            
             investment_trend = investment_data.groupby('Year')['Global corporate investment in AI'].sum()
             plt.figure(figsize=(10, 6))
             plt.plot(investment_trend.index, 
@@ -247,16 +253,21 @@
             plt.ylabel('Inversión en IA (miles de millones)', fontsize=12)
             plt.grid(True)
             plt.legend()
+            plt.show()
             
             # Código para el gráfico de despidos
+
+            # Visualización: Relación de despidos e inversión en el año pico (datos filtrados)
             plt.figure(figsize=(12, 6))
-            industry_layoffs_peak_filtered.plot(kind='bar', color='red')
-            plt.title('Despidos por industria en el año 2021 (Año pico de inversión en IA)', 
+            industry_layoffs_peak_filtered.head(10).plot(kind='bar', color='red')
+            plt.title(f'Despidos por industria en el año {investment_peak_year} (Año pico de inversión en IA, datos filtrados)', 
                       fontsize=16)
             plt.xlabel('Industria', fontsize=12)
             plt.ylabel('Porcentaje promedio de despidos', fontsize=12)
-            plt.xticks(rotation=45)
+            plt.xticks(rotation=45, ha='right')
             plt.grid(axis='y')
+            plt.tight_layout()
+            plt.show()
             </code></pre>
                 </div>
             </div>
