@@ -4,57 +4,48 @@
     <meta charset="UTF-8">
     <title>Análisis de Despidos Tech</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
     <!-- Navegación principal -->
     <nav class="top-nav">
         <div class="nav-links">
-            <a href="index.html" class="nav-link active">Introducción</a>
-            <a href="preguntas.html" class="nav-link">Preguntas</a>
-            <a href="discusion.html" class="nav-link">Discusión</a>
-            <a href="conclusiones.html" class="nav-link">Conclusiones</a>
+            <a href="#introduccion" class="nav-link active">Introducción</a>
+            <a href="#procesamiento" class="nav-link">Proceso ETL</a>
+            <a href="#analisis" class="nav-link">Análisis</a>
+            <a href="#discusion" class="nav-link">Discusión</a>
         </div>
     </nav>
 
     <div class="container">
-        <!-- Sección principal -->
-        <div class="introduction">
+        <div class="content">
             <h1>Análisis de Despidos en el Sector Tech</h1>
             
-            <!-- Card de Contexto -->
+            <!-- Contexto y Motivación -->
             <div class="content-card">
                 <h2>Contexto y Motivación</h2>
-                <p>Análisis del impacto de la IA en los trabajos del sector tecnológico...</p>
-                <button class="read-more">Leer más</button>
+                <p>Análisis del impacto de la IA en los trabajos del sector tecnológico, enfocándonos en entender los patrones de despidos y sus implicaciones...</p>
+                <div class="proceso-cards">
+                    <div class="card">
+                        <h3>Proceso ETL</h3>
+                        <p>Limpieza y procesamiento de datos</p>
+                        <a href="#procesamiento" class="btn-link">Ver Proceso</a>
+                    </div>
+                    <div class="card">
+                        <h3>Análisis EDA</h3>
+                        <p>Exploración y visualización</p>
+                        <a href="#analisis" class="btn-link">Ver Análisis</a>
+                    </div>
+                </div>
             </div>
 
-            <!-- Cards de Proceso -->
-            <div class="process-cards">
-                <div class="process-card" onclick="location.href='preguntas.html#pregunta1';">
-                    <img src="images/grafico1.png" alt="Pregunta 1">
-                    <h3>Pregunta 1</h3>
-                    <p>Sectores más afectados por despidos</p>
-                    <button class="read-more">Ver Análisis</button>
-                </div>
-
-                <div class="process-card" onclick="location.href='preguntas.html#pregunta2';">
-                    <img src="images/grafico2.png" alt="Pregunta 2">
-                    <h3>Pregunta 2</h3>
-                    <p>Relación entre tamaño de empresa y despidos</p>
-                    <button class="read-more">Ver Análisis</button>
-                </div>
+            <!-- Objetivo -->
+            <div class="content-card">
+                <h2>Objetivo</h2>
+                <p>Analizar el impacto de la implementación de IA en diferentes sectores tecnológicos, identificando patrones y tendencias en los despidos...</p>
             </div>
         </div>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="redes-sociales">
-                <a href="https://github.com/Bonjour1X/proyecto_csdatos" target="_blank" class="github">
-                    <i class="fab fa-github"></i>
-                </a>
-            </div>
-        </footer>
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
