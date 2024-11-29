@@ -3,47 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <title>Análisis de Despidos Tech</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <!-- Barra de navegación superior -->
+    <!-- Barra de navegación -->
     <nav class="top-nav">
-        <div class="nav-container">
-            <a href="#intro" class="nav-button active">Introducción</a>
-            <a href="#preguntas" class="nav-button">Preguntas</a>
-            <a href="#discusion" class="nav-button">Discusión</a>
-            <a href="#conclusiones" class="nav-button">Conclusiones</a>
+        <div class="nav-links">
+            <a href="#intro" class="nav-link active">Introducción</a>
+            <a href="#preguntas" class="nav-link">Preguntas</a>
+            <a href="#discusion" class="nav-link">Discusión</a>
+            <a href="#conclusiones" class="nav-link">Conclusiones</a>
         </div>
     </nav>
 
-    <!-- Contenido principal -->
-    <main class="content">
-        <!-- Sección Introducción -->
+    <div class="container">
         <section id="intro" class="section active">
             <h1>Análisis de Despidos en el Sector Tech</h1>
-            <div class="project-info">
+            <div class="content-box">
                 <h2>Sobre el Proyecto</h2>
                 <p>Análisis del impacto de la IA en los trabajos...</p>
             </div>
         </section>
 
-        <!-- Sección Preguntas -->
         <section id="preguntas" class="section">
-            <div class="question-block">
+            <div class="content-box">
                 <h2>Pregunta 1</h2>
-                <div class="graph-container">
-                    <img src="images/grafico1.png" alt="Gráfico sectores">
+                <div class="visualization">
+                    <img src="images/grafico_sectores.png" alt="Gráfico sectores">
                 </div>
-                <div class="code-block">
+                <div class="code-box">
                     <pre><code>
-                    # Código utilizado
-                    plt.figure(figsize=(10, 4))
-                    sns.barplot(data=sectores_mas_afectados...)
+# Código utilizado
+plt.figure(figsize=(10, 4))
+sns.barplot(data=sectores_mas_afectados...)
                     </code></pre>
                 </div>
             </div>
         </section>
-    </main>
+    </div>
 
     <script src="js/main.js"></script>
 </body>
