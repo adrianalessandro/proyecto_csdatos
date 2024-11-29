@@ -2,42 +2,49 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Análisis de Despidos en el Sector Tech</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-        }
-        .section {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-    </style>
+    <title>Análisis de Despidos Tech</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Análisis de Despidos en el Sector Tech</h1>
-        
-        <div class="section">
-            <h2>Pregunta 1: Impacto en Sectores Laborales .</h2>
-            <p>El análisis muestra que los sectores más afectados son Retail, Consumer y Transportation en números absolutos, mientras que Infrastructure lidera en impacto porcentual (85%). En contraste, los sectores tecnológicos especializados como Semiconductors y SaaS muestran mayor resistencia, sugiriendo que la especialización técnica y la innovación son factores clave en la retención laboral.</p>
+    <!-- Barra de navegación superior -->
+    <nav class="top-nav">
+        <div class="nav-container">
+            <a href="#intro" class="nav-button active">Introducción</a>
+            <a href="#preguntas" class="nav-button">Preguntas</a>
+            <a href="#discusion" class="nav-button">Discusión</a>
+            <a href="#conclusiones" class="nav-button">Conclusiones</a>
         </div>
-    </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="content">
+        <!-- Sección Introducción -->
+        <section id="intro" class="section active">
+            <h1>Análisis de Despidos en el Sector Tech</h1>
+            <div class="project-info">
+                <h2>Sobre el Proyecto</h2>
+                <p>Análisis del impacto de la IA en los trabajos...</p>
+            </div>
+        </section>
+
+        <!-- Sección Preguntas -->
+        <section id="preguntas" class="section">
+            <div class="question-block">
+                <h2>Pregunta 1</h2>
+                <div class="graph-container">
+                    <img src="images/grafico1.png" alt="Gráfico sectores">
+                </div>
+                <div class="code-block">
+                    <pre><code>
+                    # Código utilizado
+                    plt.figure(figsize=(10, 4))
+                    sns.barplot(data=sectores_mas_afectados...)
+                    </code></pre>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
