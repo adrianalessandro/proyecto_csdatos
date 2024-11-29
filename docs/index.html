@@ -4,87 +4,57 @@
     <meta charset="UTF-8">
     <title>Análisis de Despidos Tech</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <!-- Barra de navegación -->
+    <!-- Navegación principal -->
     <nav class="top-nav">
         <div class="nav-links">
-            <a href="#intro" class="nav-link active">Introducción</a>
-            <a href="#preguntas" class="nav-link">Preguntas</a>
-            <a href="#discusion" class="nav-link">Discusión</a>
-            <a href="#conclusiones" class="nav-link">Conclusiones</a>
+            <a href="index.html" class="nav-link active">Introducción</a>
+            <a href="preguntas.html" class="nav-link">Preguntas</a>
+            <a href="discusion.html" class="nav-link">Discusión</a>
+            <a href="conclusiones.html" class="nav-link">Conclusiones</a>
         </div>
     </nav>
 
     <div class="container">
-        <!-- Sección Introducción -->
-        <section id="intro" class="section active">
-            <div class="content-box">
-                <h1>Análisis de Despidos en el Sector Tech</h1>
-                <h2>Sobre el Proyecto</h2>
-                <p>Análisis del impacto de la IA en los trabajos...</p>
-                <div class="motivation-box">
-                    <h3>Motivación</h3>
-                    <!-- Aquí el contenido de motivación -->
+        <!-- Sección principal -->
+        <div class="introduction">
+            <h1>Análisis de Despidos en el Sector Tech</h1>
+            
+            <!-- Card de Contexto -->
+            <div class="content-card">
+                <h2>Contexto y Motivación</h2>
+                <p>Análisis del impacto de la IA en los trabajos del sector tecnológico...</p>
+                <button class="read-more">Leer más</button>
+            </div>
+
+            <!-- Cards de Proceso -->
+            <div class="process-cards">
+                <div class="process-card" onclick="location.href='preguntas.html#pregunta1';">
+                    <img src="images/grafico1.png" alt="Pregunta 1">
+                    <h3>Pregunta 1</h3>
+                    <p>Sectores más afectados por despidos</p>
+                    <button class="read-more">Ver Análisis</button>
+                </div>
+
+                <div class="process-card" onclick="location.href='preguntas.html#pregunta2';">
+                    <img src="images/grafico2.png" alt="Pregunta 2">
+                    <h3>Pregunta 2</h3>
+                    <p>Relación entre tamaño de empresa y despidos</p>
+                    <button class="read-more">Ver Análisis</button>
                 </div>
             </div>
-        </section>
-
-        <!-- Sección Preguntas -->
-        <section id="preguntas" class="section">
-            <!-- Pregunta 1 -->
-            <div class="content-box">
-                <h2>Pregunta 1</h2>
-                <p>¿Qué sectores laborales han experimentado el mayor impacto en términos de despidos debido a la implementación de la IA?</p>
-                <div class="visualization">
-                    <img src="images/grafico_sectores.png" alt="Gráfico sectores">
-                </div>
-                <div class="code-box">
-                    <h3>Código Utilizado</h3>
-                    <pre><code>
-# Código utilizado
-plt.figure(figsize=(10, 4))
-sns.barplot(data=sectores_mas_afectados...)
-                    </code></pre>
-                </div>
-                <div class="analysis">
-                    <h3>Análisis</h3>
-                    <p>Los sectores más afectados son Retail, Consumer y Transportation...</p>
-                </div>
+        </div>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="redes-sociales">
+                <a href="https://github.com/Bonjour1X/proyecto_csdatos" target="_blank" class="github">
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
-
-            <!-- Pregunta 2 -->
-            <div class="content-box">
-                <h2>Pregunta 2</h2>
-                <p>¿Existe alguna relación entre el tamaño de las empresas y la cantidad de despidos?</p>
-                <!-- Similar estructura a Pregunta 1 -->
-            </div>
-
-            <!-- Pregunta 3 -->
-            <div class="content-box">
-                <h2>Pregunta 3</h2>
-                <!-- Similar estructura -->
-            </div>
-        </section>
-
-        <!-- Sección Discusión -->
-        <section id="discusion" class="section">
-            <div class="content-box">
-                <h2>Discusión de Resultados</h2>
-                <!-- Contenido de discusión -->
-            </div>
-        </section>
-
-        <!-- Sección Conclusiones -->
-        <section id="conclusiones" class="section">
-            <div class="content-box">
-                <h2>Conclusiones</h2>
-                <!-- Conclusiones del análisis -->
-            </div>
-        </section>
+        </footer>
     </div>
-
-    <script src="js/main.js"></script>
 </body>
 </html>
