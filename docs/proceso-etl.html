@@ -1,71 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Proceso ETL - Análisis de Despidos Tech</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <nav class="top-nav">
-        <div class="nav-links">
-            <a href="index.html" class="nav-link">Introducción y Contexto</a>
-            <a href="proceso-etl.html" class="nav-link active">Proceso ETL</a>
-            <a href="analisis-eda.html" class="nav-link">Análisis sobre EDA</a>
-            <a href="discusion.html" class="nav-link">Discusión</a>
-        </div>
-    </nav>
-
-    <div class="container">
-        <div class="main-title">
-            <h1>Inteligencia Artificial y su Implementación en los Trabajos</h1>
-        </div>
-
-        <div class="section-title">
-            <h2>Proceso de Extracción, Transformación y Carga</h2>
-        </div>
-
-        <!-- Extracción de Datos -->
-        <div class="question-card">
-            <div class="question-header">
-                <h3>Extracción de Datos</h3>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Proceso ETL - Análisis de Despidos Tech</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <nav class="top-nav">
+            <div class="nav-links">
+                <a href="index.html" class="nav-link"
+                    >Introducción y Contexto</a
+                >
+                <a href="proceso-etl.html" class="nav-link active"
+                    >Proceso ETL</a
+                >
+                <a href="analisis-eda.html" class="nav-link"
+                    >Análisis sobre EDA</a
+                >
+                <a href="discusion.html" class="nav-link">Discusión</a>
             </div>
+        </nav>
+
+        <div class="container">
+            <div class="main-title">
+                <h1>
+                    Inteligencia Artificial y su Implementación en los Trabajos
+                </h1>
+            </div>
+
+            <div class="section-title">
+                <h2>Proceso de Extracción, Transformación y Carga</h2>
+            </div>
+
             <div class="content-card">
-                <h4>Fuentes de Datos</h4>
+                <h2>Extracción y Procesamiento de Datos</h2>
+                <p>
+                    Para nuestro análisis sobre el impacto de la IA en los
+                    trabajos, hemos recolectado datos de diversas fuentes
+                    confiables que nos permiten examinar diferentes aspectos de
+                    esta transformación tecnológica.
+                </p>
+
+                <h3>Datasets Principales:</h3>
                 <ul>
-                    <li>Dataset principal de despidos</li>
-                    <li>Información complementaria</li>
+                    <li>
+                        IA_impact_on_jobs.csv: Análisis del impacto en roles
+                        laborales
+                    </li>
+                    <li>
+                        artificial-intelligence-granted-patents-by-industry.csv:
+                        Patentes por sector
+                    </li>
+                    <li>
+                        corporate-investment-in-artificial-intelligence-by-type.csv:
+                        Inversión global
+                    </li>
+                    <li>
+                        newly-funded-artificial-intelligence-companies.csv:
+                        Startups de IA
+                    </li>
+                    <li>
+                        tech_layoffs_COMPLETO.xlsx: Despidos tecnológicos
+                        2020-2024
+                    </li>
+                    <li>
+                        isoc_eb_ai$defaultview_spreadsheet.xlsx: Adopción en
+                        Europa
+                    </li>
                 </ul>
             </div>
-            <div class="code-box">
-                <pre><code>
+
+            <div class="section-title">
+                <h2>Preguntas de Investigación</h2>
+            </div>
+
+            <!-- Tarjetas de preguntas -->
+            <div class="question-cards">
+                <div class="question-card">
+                    <h3>Impacto Sectorial</h3>
+                    <p>
+                        ¿Qué sectores laborales han experimentado el mayor
+                        impacto en términos de despidos debido a la
+                        implementación de la IA?
+                    </p>
+                </div>
+
+                <div class="question-card">
+                    <h3>Evolución de Habilidades</h3>
+                    <p>
+                        ¿Cómo ha evolucionado la demanda de habilidades en el
+                        mercado laboral desde la introducción de la IA?
+                    </p>
+                </div>
+
+                <div class="question-card">
+                    <h3>Inversión e Impacto</h3>
+                    <p>
+                        ¿Cuándo se observan los picos más significativos en la
+                        inversión en IA y su correlación con cambios en el
+                        empleo?
+                    </p>
+                </div>
+
+                <div class="question-card">
+                    <h3>Adopción Regional</h3>
+                    <p>
+                        ¿Dónde se está produciendo la adopción más rápida de la
+                        IA en el ámbito laboral?
+                    </p>
+                </div>
+
+                <div class="question-card">
+                    <h3>Automatización Jerárquica</h3>
+                    <p>
+                        ¿Por qué ciertos roles son más susceptibles a la
+                        automatización por IA?
+                    </p>
+                </div>
+            </div>
+
+            <!-- Extracción de Datos -->
+            <div class="question-card">
+                <div class="question-header">
+                    <h3>Extracción de Datos</h3>
+                </div>
+                <div class="content-card">
+                    <h4>Fuentes de Datos</h4>
+                    <ul>
+                        <li>Dataset principal de despidos</li>
+                        <li>Información complementaria</li>
+                    </ul>
+                </div>
+                <div class="code-box">
+                    <pre><code>
 # Carga de datos
 import pandas as pd
 df = pd.read_csv('tech_layoffs_COMPLETO.csv')
                 </code></pre>
+                </div>
             </div>
-        </div>
 
-        <!-- Limpieza de Datos -->
-        <div class="question-card">
-            <div class="question-header">
-                <h3>Limpieza de Datos</h3>
-            </div>
-            <div class="content-card">
-                <h4>Pasos Realizados</h4>
-                <ol>
-                    <li>Eliminación de valores nulos</li>
-                    <li>Corrección de tipos de datos</li>
-                    <li>Estandarización de formatos</li>
-                </ol>
-            </div>
-            <div class="code-box">
-                <pre><code>
+            <!-- Limpieza de Datos -->
+            <div class="question-card">
+                <div class="question-header">
+                    <h3>Limpieza de Datos</h3>
+                </div>
+                <div class="content-card">
+                    <h4>Pasos Realizados</h4>
+                    <ol>
+                        <li>Eliminación de valores nulos</li>
+                        <li>Corrección de tipos de datos</li>
+                        <li>Estandarización de formatos</li>
+                    </ol>
+                </div>
+                <div class="code-box">
+                    <pre><code>
 # Limpieza
 df = df.dropna(subset=['Laid_Off'])
 df['Percentage'] = df['Percentage'].str.replace(',','.').astype(float)
                 </code></pre>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 </html>
