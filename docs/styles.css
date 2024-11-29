@@ -286,5 +286,19 @@ body {
     gap: 2rem;
 }
 
+.question-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.question-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
 /* Afirmar en parte que animaciones como cosas de diseño fueron ayudados algo con ia*/
 /* pero para darle mas detalle para el usuario igual la informacion ya esta dada */
