@@ -224,7 +224,26 @@ body {
     transform: translateY(-2px);
 }
 
+.process-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
 
+.process-button:hover {
+    background: #1e3c72;
+    transform: translateY(-2px);
+}
 
+.process-button {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    background: #2a5298;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
 /* Afirmar en parte que animaciones como cosas de diseño fueron ayudados algo con ia*/
 /* pero para darle mas detalle para el usuario igual la informacion ya esta dada */
